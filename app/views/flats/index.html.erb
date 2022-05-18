@@ -1,0 +1,14 @@
+<h1>Flats</h1>
+<br>
+<div class="d-flex">
+<% @flats.each do |flat| %>
+  <div class="card" style="width: 18rem;">
+    <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <p class="card-text"><%= flat.address %></p>
+      <%= link_to 'Enter', flat_path(flat), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+</div>
